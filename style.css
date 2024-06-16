@@ -1,0 +1,152 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Start off-screen */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding-top: 20px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .sidebar.open {
+    left: 0; /* Slide in when open */
+  }
+  
+  .logo {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo img {
+    width: 80px;
+    height: auto;
+  }
+  
+  .sidebar-links {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar-links li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar-links li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sidebar-links li a:hover {
+    background-color: #555;
+  }
+  
+  .content {
+    margin-left: 0; /* Adjust for sidebar width */
+    transition: margin-left 0.3s ease;
+    padding: 20px;
+  }
+  
+  .navbar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    z-index: 1001; /* Ensure navbar stays above sidebar */
+  }
+  
+  .toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .toggle-btn span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease;
+  }
+  
+  .toggle-btn.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .toggle-btn.open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .toggle-btn.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  .section {
+    margin-bottom: 50px; /* Space between sections */
+  }
+  
+  .section h1, .section h2 {
+    margin-bottom: 10px;
+  }
+  
+  .section p {
+    line-height: 1.6;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .sidebar {
+      left: -250px; /* Off-screen initially on smaller screens */
+      padding-top: 80px; /* Adjust for navbar height */
+    }
+  
+    .sidebar.open {
+      left: 0;
+    }
+  
+    .content {
+      margin-left: 0;
+    }
+  
+    .sidebar-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .sidebar-links li {
+      margin: 10px 0;
+    }
+  
+    .toggle-btn {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+  
+    .content {
+      transition: margin-left 0.3s ease;
+      padding: 20px;
+    }
+  }
+  
