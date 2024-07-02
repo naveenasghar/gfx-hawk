@@ -10,13 +10,15 @@ body, html {
 }
 
 .container {
-  width: 900%;
+  width: 9060%;
   height: 100%;
   background-repeat: no-repeat;
-  background: url('https://i.pinimg.com/originals/bc/04/ec/bc04ec590a087dcc093f37c631b5d6ea.jpg') no-repeat center center fixed;
+  background: url('https://png.pngtree.com/background/20230522/original/pngtree-this-image-shows-an-anime-girl-in-red-hair-with-long-picture-image_2697002.jpg') no-repeat center center fixed;
   background-size: cover;
   position: relative;
   overflow: hidden;
+  opacity: 20px;
+  image-resolution: 8px;
 }
 
 .container::before {
@@ -64,11 +66,18 @@ body, html {
   color: white;
   text-decoration: none;
   font-size: 18px;
+  
 }
 
 .navbar ul li a:hover {
   text-decoration: underline;
+
+
 }
+a:hover {
+  background-color: yellow;
+}
+
 
 .content {
   display: flex;
@@ -90,6 +99,7 @@ body, html {
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
+ 
 }
 
 .right .intro-text {
@@ -164,4 +174,36 @@ body, html {
   .btn {
       font-size: 18px;
   }
+}
+
+
+
+
+
+
+.header .container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 90%;
+  max-width: 1200px;
+}
+.card {
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 300px;
+  margin: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.header2 .card img {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+}
+.header2 .card-body {
+  padding: 15px;
+}
+.header2 .card-text {
+  margin: 0;
+  font-size: 16px;
 }
